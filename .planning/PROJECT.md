@@ -14,11 +14,11 @@ Strict architectural separation (DB -> API -> Client) with zero database calls f
 
 - [x] Strict layered architecture: DB layer (`lib/db/`), API layer (`app/api/`), Client layer (components + hooks) with no cross-layer violations — Validated in Phase 1: Foundation and Architecture Skeleton
 - [x] Supabase accessed via service_role key on server only; no public client except for Realtime — Validated in Phase 1: Foundation and Architecture Skeleton
+- [x] User authentication (email/password) via Supabase Auth with server-side session validation — Validated in Phase 2: Authentication and Route Protection
+- [x] Protected routes via Next.js proxy with redirect to login — Validated in Phase 2: Authentication and Route Protection
+- [x] RESTful API with correct HTTP verbs and status codes (auth endpoints) — Validated in Phase 2: Authentication and Route Protection
 
 ### Active
-- [ ] RESTful API with correct HTTP verbs (GET/POST/PATCH/DELETE) and status codes
-- [ ] User authentication (email/password) via Supabase Auth with server-side session validation
-- [ ] Protected routes via Next.js middleware with redirect to login
 - [ ] Chat CRUD (create, rename, delete) with ownership validation
 - [ ] Message history persisted in PostgreSQL per chat
 - [ ] SSE streaming of AI responses (OpenAI gpt-4o-mini default) with real-time token display
@@ -77,4 +77,4 @@ Strict architectural separation (DB -> API -> Client) with zero database calls f
 | Browser fingerprint for anonymous tracking | Server-validated, more reliable than cookie-only approach | -- Pending |
 
 ---
-*Last updated: 2026-03-29 after Phase 1 completion — architecture skeleton established*
+*Last updated: 2026-03-29 after Phase 2 completion — authentication and route protection established*
