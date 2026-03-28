@@ -63,8 +63,8 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Architecture
 
 - [x] **ARCH-01**: Strict 3-layer separation: DB (`lib/db/`) -> API (`app/api/`) -> Client (components/hooks)
-- [ ] **ARCH-02**: Zero database calls from components (including Server Components)
-- [ ] **ARCH-03**: Supabase service_role key used only in `lib/db/client.ts`
+- [x] **ARCH-02**: Zero database calls from components (including Server Components)
+- [x] **ARCH-03**: Supabase service_role key used only in `lib/db/client.ts`
 - [ ] **ARCH-04**: All API routes validate authentication and return proper HTTP status codes
 - [ ] **ARCH-05**: Input validation with Zod schemas on all API endpoints
 
@@ -119,8 +119,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | ARCH-01 | Phase 1 | Complete |
-| ARCH-02 | Phase 1 | Pending |
-| ARCH-03 | Phase 1 | Pending |
+| ARCH-02 | Phase 1 | Complete |
+| ARCH-03 | Phase 1 | Complete |
 | AUTH-01 | Phase 2 | Pending |
 | AUTH-02 | Phase 2 | Pending |
 | AUTH-03 | Phase 2 | Pending |

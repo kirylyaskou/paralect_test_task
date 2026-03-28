@@ -34,8 +34,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 - [x] 01-01-PLAN.md — Scaffold Next.js 15 project, install dependencies, configure ESLint/Prettier, create providers and root layout
-- [ ] 01-02-PLAN.md — Create Supabase migration (5 tables, enum, trigger, indexes), push to remote, generate TypeScript types
-- [ ] 01-03-PLAN.md — Create DB access layer (lib/db/*.ts with server-only), Zod schemas, and shared TypeScript types
+- [x] 01-02-PLAN.md — Create Supabase migration (5 tables, enum, trigger, indexes), push to remote, generate TypeScript types
+- [x] 01-03-PLAN.md — Create DB access layer (lib/db/*.ts with server-only), Zod schemas, and shared TypeScript types
 
 ### Phase 2: Authentication and Route Protection
 **Goal**: Users can securely create accounts, log in, and access protected routes while all API endpoints validate authentication and input
