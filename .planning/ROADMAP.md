@@ -47,10 +47,10 @@ Plans:
   3. User can log out from any page and is redirected to the login screen
   4. Visiting any protected route while unauthenticated redirects to the login page (no flash of protected content)
   5. All API routes return proper HTTP status codes (401 for unauthenticated, 400 for bad input with Zod validation errors, 403 for unauthorized)
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 
 Plans:
-- [ ] 02-01-PLAN.md — Install jose, create auth infrastructure (dedicated auth client, JWT session management, requireAuth helper), proxy.ts route protection, and all 4 auth API endpoints
+- [x] 02-01-PLAN.md — Install jose, create auth infrastructure (dedicated auth client, JWT session management, requireAuth helper), proxy.ts route protection, and all 4 auth API endpoints
 - [ ] 02-02-PLAN.md — Install shadcn components (card, input, label, alert), create login/signup pages per UI-SPEC, auth/main route group layouts, and end-to-end flow verification
 
 ### Phase 3: Chat Management and Client Foundation
@@ -112,7 +112,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation and Architecture Skeleton | 3/3 | Complete | 2026-03-29 |
-| 2. Authentication and Route Protection | 0/2 | Planning complete | - |
+| 2. Authentication and Route Protection | 1/2 | In Progress|  |
 | 3. Chat Management and Client Foundation | 0/TBD | Not started | - |
 | 4. Streaming and Core Chat Experience | 0/TBD | Not started | - |
 | 5. Enhancements and Deployment | 0/TBD | Not started | - |

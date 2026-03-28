@@ -9,10 +9,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Authentication
 
-- [ ] **AUTH-01**: User can create account with email and password
-- [ ] **AUTH-02**: User can log in and session persists across browser refresh
-- [ ] **AUTH-03**: User can log out from any page
-- [ ] **AUTH-04**: Unauthenticated users are redirected to login page via middleware
+- [x] **AUTH-01**: User can create account with email and password
+- [x] **AUTH-02**: User can log in and session persists across browser refresh
+- [x] **AUTH-03**: User can log out from any page
+- [x] **AUTH-04**: Unauthenticated users are redirected to login page via middleware
 
 ### Chat Management
 
@@ -65,8 +65,8 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **ARCH-01**: Strict 3-layer separation: DB (`lib/db/`) -> API (`app/api/`) -> Client (components/hooks)
 - [x] **ARCH-02**: Zero database calls from components (including Server Components)
 - [x] **ARCH-03**: Supabase service_role key used only in `lib/db/client.ts`
-- [ ] **ARCH-04**: All API routes validate authentication and return proper HTTP status codes
-- [ ] **ARCH-05**: Input validation with Zod schemas on all API endpoints
+- [x] **ARCH-04**: All API routes validate authentication and return proper HTTP status codes
+- [x] **ARCH-05**: Input validation with Zod schemas on all API endpoints
 
 ### Deployment
 
@@ -121,12 +121,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ARCH-01 | Phase 1 | Complete |
 | ARCH-02 | Phase 1 | Complete |
 | ARCH-03 | Phase 1 | Complete |
-| AUTH-01 | Phase 2 | Pending |
-| AUTH-02 | Phase 2 | Pending |
-| AUTH-03 | Phase 2 | Pending |
-| AUTH-04 | Phase 2 | Pending |
-| ARCH-04 | Phase 2 | Pending |
-| ARCH-05 | Phase 2 | Pending |
+| AUTH-01 | Phase 2 | Complete |
+| AUTH-02 | Phase 2 | Complete |
+| AUTH-03 | Phase 2 | Complete |
+| AUTH-04 | Phase 2 | Complete |
+| ARCH-04 | Phase 2 | Complete |
+| ARCH-05 | Phase 2 | Complete |
 | CHAT-01 | Phase 3 | Pending |
 | CHAT-02 | Phase 3 | Pending |
 | CHAT-03 | Phase 3 | Pending |
