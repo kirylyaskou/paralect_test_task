@@ -13,7 +13,7 @@ This roadmap delivers a ChatGPT-like chatbot with strict three-layer architectur
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: Foundation and Architecture Skeleton** - DB schema, data access layer, Supabase clients, types, and Zod schemas with enforced layer boundaries
-- [ ] **Phase 2: Authentication and Route Protection** - Email/password auth, session management, middleware route protection, and API validation patterns
+- [x] **Phase 2: Authentication and Route Protection** - Email/password auth, session management, middleware route protection, and API validation patterns
 - [ ] **Phase 3: Chat Management and Client Foundation** - Chat CRUD, sidebar, responsive layout, TanStack Query with optimistic updates, theme toggle
 - [ ] **Phase 4: Streaming and Core Chat Experience** - SSE streaming of AI responses, message persistence, markdown rendering, welcome screen, error handling
 - [ ] **Phase 5: Enhancements and Deployment** - Image/document attachments, anonymous trial, multi-tab sync, Vercel deployment, README, and demo video
@@ -47,11 +47,11 @@ Plans:
   3. User can log out from any page and is redirected to the login screen
   4. Visiting any protected route while unauthenticated redirects to the login page (no flash of protected content)
   5. All API routes return proper HTTP status codes (401 for unauthenticated, 400 for bad input with Zod validation errors, 403 for unauthorized)
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans executed
 
 Plans:
 - [x] 02-01-PLAN.md — Install jose, create auth infrastructure (dedicated auth client, JWT session management, requireAuth helper), proxy.ts route protection, and all 4 auth API endpoints
-- [ ] 02-02-PLAN.md — Install shadcn components (card, input, label, alert), create login/signup pages per UI-SPEC, auth/main route group layouts, and end-to-end flow verification
+- [x] 02-02-PLAN.md — Install shadcn components (card, input, label, alert), create login/signup pages per UI-SPEC, auth/main route group layouts, and end-to-end flow verification
 
 ### Phase 3: Chat Management and Client Foundation
 **Goal**: Users can create, browse, and manage chats through a responsive sidebar interface with real-time optimistic feedback
@@ -112,7 +112,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation and Architecture Skeleton | 3/3 | Complete | 2026-03-29 |
-| 2. Authentication and Route Protection | 1/2 | In Progress|  |
+| 2. Authentication and Route Protection | 2/2 | Complete | 2026-03-29 |
 | 3. Chat Management and Client Foundation | 0/TBD | Not started | - |
 | 4. Streaming and Core Chat Experience | 0/TBD | Not started | - |
 | 5. Enhancements and Deployment | 0/TBD | Not started | - |

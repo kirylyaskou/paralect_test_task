@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-01-PLAN.md
-last_updated: "2026-03-28T22:44:00Z"
+stopped_at: Completed 02-02-PLAN.md
+last_updated: "2026-03-29T12:05:00Z"
 last_activity: 2026-03-29
 progress:
   total_phases: 5
-  completed_phases: 1
-  total_plans: 3
-  completed_plans: 4
-  percent: 20
+  completed_phases: 2
+  total_plans: 5
+  completed_plans: 5
+  percent: 40
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-27)
 
 **Core value:** Strict architectural separation (DB -> API -> Client) with zero database calls from components
-**Current focus:** Phase 02 — authentication-and-route-protection
+**Current focus:** Phase 03 — chat-management-and-client-foundation
 
 ## Current Position
 
-Phase: 2
-Plan: 01 complete
+Phase: 2 complete
+Plan: 02 complete
 Status: Executing
 Last activity: 2026-03-29
 
-Progress: [██░░░░░░░░] 20%
+Progress: [████░░░░░░] 40%
 
 ## Performance Metrics
 
@@ -55,6 +55,7 @@ Progress: [██░░░░░░░░] 20%
 | Phase 01 P01 | 12min | 2 tasks | 19 files |
 | Phase 01 P03 | 5min | 2 tasks | 10 files |
 | Phase 02 P01 | 4min | 2 tasks | 12 files |
+| Phase 02 P02 | 3min | 3 tasks | 10 files |
 
 ## Accumulated Context
 
@@ -75,6 +76,9 @@ Recent decisions affecting current work:
 - [Phase 02]: 7-day JWT session expiry with jose HS256 signing
 - [Phase 02]: Optimistic cookie check in proxy.ts (existence only, no JWT verify) for performance
 - [Phase 02]: proxy.ts uses Next.js 16 convention (not middleware.ts)
+- [Phase 02]: Route groups (auth)/(main) separate layout concerns without affecting URL structure
+- [Phase 02]: Client-side fetch to API routes (not Server Actions) maintains 3-layer architecture
+- [Phase 02]: Responsive card: border-0 shadow-none on mobile, sm:border sm:shadow-sm on tablet+
 
 ### Pending Todos
 
@@ -87,6 +91,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-28T22:44:00Z
-Stopped at: Completed 02-01-PLAN.md
-Resume file: .planning/phases/02-authentication-and-route-protection/02-01-SUMMARY.md
+Last session: 2026-03-29T12:05:00Z
+Stopped at: Completed 02-02-PLAN.md
+Resume file: .planning/phases/02-authentication-and-route-protection/02-02-SUMMARY.md
