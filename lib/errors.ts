@@ -11,3 +11,10 @@ export class DatabaseError extends Error {
     this.details = pgError?.details ?? null
   }
 }
+
+export class AuthenticationError extends Error {
+  constructor(message: string) {
+    super(message)
+    this.name = 'AuthenticationError'
+  }
+}
