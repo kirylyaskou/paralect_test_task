@@ -54,11 +54,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### UX Polish
 
-- [ ] **UX-01**: Loading skeletons for sidebar and message list
+- [x] **UX-01**: Loading skeletons for sidebar and message list
 - [ ] **UX-02**: Welcome screen with suggested prompts on empty chat
 - [ ] **UX-03**: Error toasts and retry buttons on API failures
-- [ ] **UX-04**: Responsive layout with sidebar as Sheet on mobile
-- [ ] **UX-05**: Dark/light theme toggle
+- [x] **UX-04**: Responsive layout with sidebar as Sheet on mobile
+- [x] **UX-05**: Dark/light theme toggle
 
 ### Architecture
 
@@ -132,9 +132,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CHAT-03 | Phase 3 | Complete |
 | CHAT-04 | Phase 3 | Complete |
 | CHAT-05 | Phase 3 | Complete |
-| UX-01 | Phase 3 | Pending |
-| UX-04 | Phase 3 | Pending |
-| UX-05 | Phase 3 | Pending |
+| UX-01 | Phase 3 | Complete |
+| UX-04 | Phase 3 | Complete |
+| UX-05 | Phase 3 | Complete |
 | MSG-01 | Phase 4 | Pending |
 | MSG-02 | Phase 4 | Pending |
 | MSG-03 | Phase 4 | Pending |
