@@ -1,29 +1,31 @@
 'use client'
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { MessageSquare, Plus, Loader2 } from 'lucide-react'
+import { useCreateChat } from '@/hooks/use-chats'
 import { Button } from '@/components/ui/button'
 
 export default function HomePage() {
-  const router = useRouter()
-  const [isLoggingOut, setIsLoggingOut] = useState(false)
-
-  async function handleLogout() {
-    setIsLoggingOut(true)
-    await fetch('/api/auth/logout', { method: 'POST' })
-    router.push('/login')
-  }
+  const createChat = useCreateChat()
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-4">
-      <h1 className="text-2xl font-semibold">Welcome to Chatbot</h1>
-      <p className="text-muted-foreground">You are logged in. Chat interface coming in Phase 3.</p>
+    <div className="flex flex-1 flex-col items-center justify-center p-6">
+      <MessageSquare className="h-12 w-12 text-muted-foreground" />
+      <h1 className="mt-4 text-xl font-semibold">Start a conversation</h1>
+      <p className="mt-2 text-sm text-muted-foreground text-center max-w-xs">
+        Create a new chat to begin talking with the AI assistant.
+      </p>
       <Button
-        variant="outline"
-        onClick={handleLogout}
-        disabled={isLoggingOut}
+        variant="default"
+        className="mt-6"
+        onClick={() => createChat.mutate()}
+        disabled={createChat.isPending}
       >
-        {isLoggingOut ? 'Signing out...' : 'Sign out'}
+        {createChat.isPending ? (
+          <Loader2 className="h-4 w-4 animate-spin" />
+        ) : (
+          <Plus className="h-4 w-4" />
+        )}
+        {createChat.isPending ? 'Creating...' : 'New chat'}
       </Button>
     </div>
   )

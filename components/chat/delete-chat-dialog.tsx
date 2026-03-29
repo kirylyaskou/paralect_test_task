@@ -40,7 +40,7 @@ export function DeleteChatDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Delete chat</DialogTitle>
+          <DialogTitle>Delete {chatTitle ? `"${chatTitle}"` : 'chat'}</DialogTitle>
           <DialogDescription>
             Are you sure you want to delete this chat? This action cannot be
             undone.
