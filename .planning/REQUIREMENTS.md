@@ -26,7 +26,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **MSG-01**: User can send a text message and receive AI response
 - [x] **MSG-02**: AI response streams token-by-token via SSE
-- [ ] **MSG-03**: Messages render markdown with syntax-highlighted code blocks
+- [x] **MSG-03**: Messages render markdown with syntax-highlighted code blocks
 - [x] **MSG-04**: Full conversation history loads when opening a chat
 
 ### Image Attachments
@@ -55,7 +55,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### UX Polish
 
 - [x] **UX-01**: Loading skeletons for sidebar and message list
-- [ ] **UX-02**: Welcome screen with suggested prompts on empty chat
+- [x] **UX-02**: Welcome screen with suggested prompts on empty chat
 - [x] **UX-03**: Error toasts and retry buttons on API failures
 - [x] **UX-04**: Responsive layout with sidebar as Sheet on mobile
 - [x] **UX-05**: Dark/light theme toggle
@@ -137,9 +137,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UX-05 | Phase 3 | Complete |
 | MSG-01 | Phase 4 | Complete |
 | MSG-02 | Phase 4 | Complete |
-| MSG-03 | Phase 4 | Pending |
+| MSG-03 | Phase 4 | Complete |
 | MSG-04 | Phase 4 | Complete |
-| UX-02 | Phase 4 | Pending |
+| UX-02 | Phase 4 | Complete |
 | UX-03 | Phase 4 | Complete |
 | IMG-01 | Phase 5 | Pending |
 | IMG-02 | Phase 5 | Pending |

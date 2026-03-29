@@ -85,7 +85,7 @@ Plans:
 
 Plans:
 - [x] 04-01-PLAN.md — Install AI SDK + markdown packages, create OpenRouter provider, DB-to-UIMessage converter, Sonner toast, and 3 API routes (streaming chat, message history, title generation)
-- [ ] 04-02-PLAN.md — Build chat UI components (message list, markdown renderer, code block with copy, auto-resize input, welcome screen, auto-scroll, error handling) and wire to streaming API
+- [x] 04-02-PLAN.md — Build chat UI components (message list, markdown renderer, code block with copy, auto-resize input, welcome screen, auto-scroll, error handling) and wire to streaming API
 
 ### Phase 5: Enhancements and Deployment
 **Goal**: The application supports file attachments, anonymous trial access, multi-tab sync, and is deployed to production with documentation
