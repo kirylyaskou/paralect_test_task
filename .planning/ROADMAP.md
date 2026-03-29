@@ -67,7 +67,7 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Install shadcn components (sidebar, dialog, dropdown-menu, scroll-area), create chat CRUD API routes with ownership validation, create TanStack Query hooks with optimistic updates
+- [x] 03-01-PLAN.md — Install shadcn components (sidebar, dialog, dropdown-menu, scroll-area), create chat CRUD API routes with ownership validation, create TanStack Query hooks with optimistic updates
 - [ ] 03-02-PLAN.md — Build sidebar UI (app-sidebar, chat-list, chat-item, delete dialog), content header with theme toggle, update main layout with SidebarProvider, create home page empty state and chat placeholder page
 
 ### Phase 4: Streaming and Core Chat Experience
