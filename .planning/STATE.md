@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 03-02-PLAN.md
-last_updated: "2026-03-29T12:04:24.297Z"
+stopped_at: Completed 04-01-PLAN.md
+last_updated: "2026-03-29T12:46:42.699Z"
 last_activity: 2026-03-29
 progress:
   total_phases: 5
   completed_phases: 3
-  total_plans: 7
-  completed_plans: 7
+  total_plans: 9
+  completed_plans: 8
   percent: 40
 ---
 
@@ -21,12 +21,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-27)
 
 **Core value:** Strict architectural separation (DB -> API -> Client) with zero database calls from components
-**Current focus:** Phase 03 — chat-management-and-client-foundation
+**Current focus:** Phase 04 — streaming-and-core-chat-experience
 
 ## Current Position
 
-Phase: 4
-Plan: Not started
+Phase: 04 (streaming-and-core-chat-experience) — EXECUTING
+Plan: 2 of 2
 Status: Ready to execute
 Last activity: 2026-03-29
 
@@ -57,6 +57,7 @@ Progress: [████░░░░░░] 40%
 | Phase 02 P01 | 4min | 2 tasks | 12 files |
 | Phase 02 P02 | 3min | 3 tasks | 10 files |
 | Phase 03 P02 | 5min | 3 tasks | 9 files |
+| Phase 04 P01 | 4min | 2 tasks | 12 files |
 
 ## Accumulated Context
 
@@ -83,6 +84,9 @@ Recent decisions affecting current work:
 - [Phase 03]: Used render prop pattern (shadcn v4/base-ui) instead of asChild for component composition
 - [Phase 03]: Main layout is Server Component; SidebarProvider handles client state internally
 - [Phase 03]: Chat [id] page uses await params per Next.js 16 convention
+- [Phase 04]: convertToModelMessages must be awaited (returns Promise in AI SDK v6)
+- [Phase 04]: UIMessage in AI SDK v6 has no createdAt field - converter maps id, role, parts only
+- [Phase 04]: meta-llama/llama-4-maverick:free model for both chat streaming and title generation
 
 ### Pending Todos
 
@@ -95,6 +99,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T11:56:34.078Z
-Stopped at: Completed 03-02-PLAN.md
+Last session: 2026-03-29T12:46:42.696Z
+Stopped at: Completed 04-01-PLAN.md
 Resume file: None
