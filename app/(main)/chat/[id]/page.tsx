@@ -1,6 +1,7 @@
 import { requireAuth } from '@/lib/auth/helpers'
 import { getChatById } from '@/lib/db/chats'
 import { getMessagesByChatId } from '@/lib/db/messages'
+import { getDocumentsByChatId } from '@/lib/db/documents'
 import { dbMessagesToUIMessages } from '@/lib/ai/convert-messages'
 import { redirect } from 'next/navigation'
 import { ChatView } from '@/components/chat/chat-view'
@@ -33,6 +34,13 @@ export default async function ChatPage({
 
   const dbMessages = await getMessagesByChatId(id)
   const initialMessages = dbMessagesToUIMessages(dbMessages)
+  const documents = await getDocumentsByChatId(id)
 
-  return <ChatView chatId={id} initialMessages={initialMessages} />
+  return (
+    <ChatView
+      chatId={id}
+      initialMessages={initialMessages}
+      initialDocuments={documents}
+    />
+  )
 }
