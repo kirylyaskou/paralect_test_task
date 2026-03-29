@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 05-03-PLAN.md
-last_updated: "2026-03-29T20:47:00.000Z"
+stopped_at: "05-04-PLAN.md Task 2 checkpoint (human-action: deploy to Vercel + record Loom)"
+last_updated: "2026-03-29T20:52:00.000Z"
 last_activity: 2026-03-29
 progress:
   total_phases: 5
   completed_phases: 4
   total_plans: 14
   completed_plans: 11
-  percent: 79
+  percent: 82
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 ## Current Position
 
 Phase: 05 (enhancements-and-deployment) — EXECUTING
-Plan: 3 of 4
-Status: Plan 03 complete — plan 04 remaining
+Plan: 4 of 4 (checkpoint pending)
+Status: Plan 04 Task 1 complete — Task 2 awaiting human action (deploy + Loom video)
 Last activity: 2026-03-29
 
-Progress: [████████░░] 79%
+Progress: [████████░░] 82%
 
 ## Performance Metrics
 
@@ -62,6 +62,7 @@ Progress: [████████░░] 79%
 | Phase 05 P01 | 5min | 2 tasks | 12 files |
 | Phase 05 P02 | 5min | 3 tasks | 10 files |
 | Phase 05 P03 | 4min | 2 tasks | 6 files |
+| Phase 05 P04 | 2min | 1 task (checkpoint) | 2 files |
 
 ## Accumulated Context
 
@@ -104,10 +105,13 @@ Recent decisions affecting current work:
 - [Phase 05]: Dynamic vision model selection (llama-3.2-11b-vision-instruct) when messages contain image file parts
 - [Phase 05]: Document context injected into system prompt (not as separate messages), truncated at 4000 chars
 - [Phase 05]: Upload-then-send pattern: get signed URL -> upload to Storage -> complete -> build parts -> sendMessage
+- [Phase 05]: SESSION_SECRET env var (not JWT_SECRET) -- actual variable name in lib/auth/session.ts
+- [Phase 05]: Mermaid graph TB for architecture diagram in README
 
 ### Pending Todos
 
-None yet.
+- Deploy to Vercel and update README.md with actual deployment URL (DEPL-01)
+- Record Loom demo video and update README.md with video link (DEPL-03)
 
 ### Blockers/Concerns
 
@@ -116,6 +120,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T20:47:00.000Z
-Stopped at: Completed 05-03-PLAN.md
-Resume file: None
+Last session: 2026-03-29T20:52:00.000Z
+Stopped at: 05-04-PLAN.md Task 2 checkpoint (human-action: deploy to Vercel + record Loom)
+Resume file: .planning/phases/05-enhancements-and-deployment/05-04-PLAN.md
