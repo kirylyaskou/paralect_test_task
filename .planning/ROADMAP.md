@@ -64,11 +64,11 @@ Plans:
   4. User can only access their own chats -- attempting to open another user's chat returns 403
   5. Layout is responsive: sidebar is visible on desktop, collapses to a Sheet component on mobile
   6. Dark/light theme toggle works and preference persists across sessions
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md — Install shadcn components (sidebar, dialog, dropdown-menu, scroll-area), create chat CRUD API routes with ownership validation, create TanStack Query hooks with optimistic updates
+- [ ] 03-02-PLAN.md — Build sidebar UI (app-sidebar, chat-list, chat-item, delete dialog), content header with theme toggle, update main layout with SidebarProvider, create home page empty state and chat placeholder page
 
 ### Phase 4: Streaming and Core Chat Experience
 **Goal**: Users can have real-time AI conversations with token-by-token streaming, markdown rendering, and polished chat UX
@@ -113,6 +113,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 |-------|----------------|--------|-----------|
 | 1. Foundation and Architecture Skeleton | 3/3 | Complete | 2026-03-29 |
 | 2. Authentication and Route Protection | 2/2 | Complete | 2026-03-29 |
-| 3. Chat Management and Client Foundation | 0/TBD | Not started | - |
+| 3. Chat Management and Client Foundation | 0/2 | Not started | - |
 | 4. Streaming and Core Chat Experience | 0/TBD | Not started | - |
 | 5. Enhancements and Deployment | 0/TBD | Not started | - |
