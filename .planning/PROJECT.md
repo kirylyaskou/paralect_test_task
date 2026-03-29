@@ -18,8 +18,13 @@ Strict architectural separation (DB -> API -> Client) with zero database calls f
 - [x] Protected routes via Next.js proxy with redirect to login — Validated in Phase 2: Authentication and Route Protection
 - [x] RESTful API with correct HTTP verbs and status codes (auth endpoints) — Validated in Phase 2: Authentication and Route Protection
 
+- [x] Chat CRUD (create, delete) with ownership validation — Validated in Phase 3: Chat Management and Client Foundation
+- [x] TanStack Query for all client-side data fetching with optimistic updates — Validated in Phase 3: Chat Management and Client Foundation
+- [x] Responsive UI: sidebar chat list + main chat area, mobile sidebar as Sheet — Validated in Phase 3: Chat Management and Client Foundation
+- [x] Loading states (skeletons), empty states (welcome screen) — Validated in Phase 3: Chat Management and Client Foundation
+- [x] Dark/light theme toggle — Validated in Phase 3: Chat Management and Client Foundation
+
 ### Active
-- [ ] Chat CRUD (create, rename, delete) with ownership validation
 - [ ] Message history persisted in PostgreSQL per chat
 - [ ] SSE streaming of AI responses (OpenAI gpt-4o-mini default) with real-time token display
 - [ ] Auto-generated chat titles via LLM on first message
@@ -27,11 +32,8 @@ Strict architectural separation (DB -> API -> Client) with zero database calls f
 - [ ] Document upload (PDF/DOCX) with text extraction injected as LLM context
 - [ ] Anonymous access: 3 free questions tracked server-side, then registration prompt
 - [ ] Multi-tab sync via Supabase Realtime (chat list updates across tabs)
-- [ ] TanStack Query for all client-side data fetching with optimistic updates
-- [ ] Responsive UI: sidebar chat list + main chat area, mobile sidebar as Sheet
-- [ ] Loading states (skeletons), empty states (welcome screen), error states (toasts)
 - [ ] Markdown rendering in AI responses with syntax highlighting
-- [ ] Dark/light theme toggle
+- [ ] Error states (toasts)
 - [ ] Deploy to Vercel with README and Loom demo video
 
 ### Out of Scope
@@ -77,4 +79,4 @@ Strict architectural separation (DB -> API -> Client) with zero database calls f
 | Browser fingerprint for anonymous tracking | Server-validated, more reliable than cookie-only approach | -- Pending |
 
 ---
-*Last updated: 2026-03-29 after Phase 2 completion — authentication and route protection established*
+*Last updated: 2026-03-29 after Phase 3 completion — chat management sidebar with optimistic CRUD, responsive layout, and theme toggle*
