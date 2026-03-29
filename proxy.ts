@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-const publicRoutes = ['/login', '/signup']
+const publicRoutes = ['/', '/login', '/signup']
 
 export function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname
-  const isPublicRoute = publicRoutes.some((route) => path.startsWith(route))
+  const isPublicRoute = publicRoutes.some((route) => path === route || (route !== '/' && path.startsWith(route)))
 
   const sessionCookie = request.cookies.get('session')?.value
 
@@ -14,8 +14,9 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(new URL('/login', request.url))
   }
 
-  // Redirect authenticated users away from auth pages
-  if (isPublicRoute && sessionCookie) {
+  // Redirect authenticated users away from auth pages (login/signup only, not home)
+  const isAuthPage = ['/login', '/signup'].some((route) => path.startsWith(route))
+  if (isAuthPage && sessionCookie) {
     return NextResponse.redirect(new URL('/', request.url))
   }
 
