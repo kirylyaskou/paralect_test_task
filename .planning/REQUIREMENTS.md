@@ -44,13 +44,13 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Anonymous Access
 
-- [ ] **ANON-01**: Unauthenticated user can ask up to 3 questions
-- [ ] **ANON-02**: Question count tracked server-side via fingerprint
-- [ ] **ANON-03**: Registration prompt shown when limit reached
+- [x] **ANON-01**: Unauthenticated user can ask up to 3 questions
+- [x] **ANON-02**: Question count tracked server-side via fingerprint
+- [x] **ANON-03**: Registration prompt shown when limit reached
 
 ### Multi-Tab Sync
 
-- [ ] **SYNC-01**: Chat list updates in real-time across browser tabs via Supabase Realtime
+- [x] **SYNC-01**: Chat list updates in real-time across browser tabs via Supabase Realtime
 
 ### UX Polish
 
@@ -148,10 +148,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DOC-01 | Phase 5 | Complete |
 | DOC-02 | Phase 5 | Pending |
 | DOC-03 | Phase 5 | Complete |
-| ANON-01 | Phase 5 | Pending |
-| ANON-02 | Phase 5 | Pending |
-| ANON-03 | Phase 5 | Pending |
-| SYNC-01 | Phase 5 | Pending |
+| ANON-01 | Phase 5 | Complete |
+| ANON-02 | Phase 5 | Complete |
+| ANON-03 | Phase 5 | Complete |
+| SYNC-01 | Phase 5 | Complete |
 | DEPL-01 | Phase 5 | Pending |
 | DEPL-02 | Phase 5 | Pending |
 | DEPL-03 | Phase 5 | Pending |

@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: verifying
-stopped_at: Completed 05-01-PLAN.md
-last_updated: "2026-03-29T20:39:46.735Z"
+stopped_at: Completed Wave 1 (05-01 + 05-02)
+last_updated: "2026-03-29T20:40:00.000Z"
 last_activity: 2026-03-29
 progress:
   total_phases: 5
@@ -60,6 +60,7 @@ Progress: [████░░░░░░] 40%
 | Phase 04 P01 | 4min | 2 tasks | 12 files |
 | Phase 04 P02 | 5min | 2 tasks | 12 files |
 | Phase 05 P01 | 5min | 2 tasks | 12 files |
+| Phase 05 P02 | 5min | 3 tasks | 10 files |
 
 ## Accumulated Context
 
@@ -95,6 +96,10 @@ Recent decisions affecting current work:
 - [Phase 05]: pdf-parse v2 PDFParse class API for PDF text extraction (ESM-native, proper cleanup)
 - [Phase 05]: Signed URL upload pattern: server creates URL with service_role, client uploads to Storage directly
 - [Phase 05]: Text extraction truncated to 4000 chars for manageable LLM context
+- [Phase 05]: FingerprintJS with crypto.randomUUID fallback for anonymous tracking
+- [Phase 05]: base-ui Dialog: disablePointerDismissal + showCloseButton={false} for non-dismissible
+- [Phase 05]: Realtime subscription scoped per userId via client wrapper component
+- [Phase 05]: Auth detection via GET /api/chats on mount for anonymous vs authenticated branching
 
 ### Pending Todos
 
@@ -107,6 +112,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T20:39:46.732Z
-Stopped at: Completed 05-01-PLAN.md
+Last session: 2026-03-29T20:40:00.000Z
+Stopped at: Completed Wave 1 (05-01 + 05-02)
 Resume file: None

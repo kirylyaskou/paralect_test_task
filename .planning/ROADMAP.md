@@ -101,7 +101,7 @@ Plans:
 
 Plans:
 - [x] 05-01-PLAN.md — Install deps (fingerprintjs, pdf-parse, mammoth), create Supabase public client, upload API routes (signed URL + text extraction), attachment UI components (preview bar, thumbnails, file chips), extend chat input with attach button and clipboard paste
-- [ ] 05-02-PLAN.md — Anonymous chat API route with fingerprint-based 3-question limit, FingerprintJS hook, limit dialog, proxy.ts anonymous access, Supabase Realtime hook for multi-tab chat list sync
+- [x] 05-02-PLAN.md — Anonymous chat API route with fingerprint-based 3-question limit, FingerprintJS hook, limit dialog, proxy.ts anonymous access, Supabase Realtime hook for multi-tab chat list sync
 - [ ] 05-03-PLAN.md — Wire attachments end-to-end: vision model selection for image messages, document context injection in system prompt, upload flow in ChatView, image/document rendering in messages
 - [ ] 05-04-PLAN.md — README with setup instructions, architecture diagram (Mermaid), deploy link, Loom video placeholder; Vercel deployment (human action)
 
@@ -116,4 +116,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 2. Authentication and Route Protection | 2/2 | Complete | 2026-03-29 |
 | 3. Chat Management and Client Foundation | 2/2 | Complete | 2026-03-29 |
 | 4. Streaming and Core Chat Experience | 2/2 | Complete | 2026-03-29 |
-| 5. Enhancements and Deployment | 1/4 | In Progress|  |
+| 5. Enhancements and Deployment | 2/4 | In Progress|  |
