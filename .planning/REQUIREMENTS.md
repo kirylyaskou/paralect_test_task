@@ -34,12 +34,12 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **IMG-01**: User can paste image from clipboard into chat input
 - [x] **IMG-02**: User can upload image file via button
 - [x] **IMG-03**: Image preview shown before sending
-- [ ] **IMG-04**: Images sent to OpenAI vision API for analysis
+- [x] **IMG-04**: Images sent to OpenAI vision API for analysis
 
 ### Document Attachments
 
 - [x] **DOC-01**: User can upload PDF/DOCX documents to a chat
-- [ ] **DOC-02**: Extracted text is injected as context in LLM system prompt
+- [x] **DOC-02**: Extracted text is injected as context in LLM system prompt
 - [x] **DOC-03**: Attached documents are listed/indicated in the chat
 
 ### Anonymous Access
@@ -144,9 +144,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | IMG-01 | Phase 5 | Complete |
 | IMG-02 | Phase 5 | Complete |
 | IMG-03 | Phase 5 | Complete |
-| IMG-04 | Phase 5 | Pending |
+| IMG-04 | Phase 5 | Complete |
 | DOC-01 | Phase 5 | Complete |
-| DOC-02 | Phase 5 | Pending |
+| DOC-02 | Phase 5 | Complete |
 | DOC-03 | Phase 5 | Complete |
 | ANON-01 | Phase 5 | Complete |
 | ANON-02 | Phase 5 | Complete |

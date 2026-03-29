@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: verifying
-stopped_at: Completed Wave 1 (05-01 + 05-02)
-last_updated: "2026-03-29T20:40:00.000Z"
+status: executing
+stopped_at: Completed 05-03-PLAN.md
+last_updated: "2026-03-29T20:47:00.000Z"
 last_activity: 2026-03-29
 progress:
   total_phases: 5
   completed_phases: 4
-  total_plans: 13
-  completed_plans: 10
-  percent: 40
+  total_plans: 14
+  completed_plans: 11
+  percent: 79
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-27)
 
 **Core value:** Strict architectural separation (DB -> API -> Client) with zero database calls from components
-**Current focus:** Phase 04 — streaming-and-core-chat-experience
+**Current focus:** Phase 05 — enhancements-and-deployment
 
 ## Current Position
 
-Phase: 04 (streaming-and-core-chat-experience) — EXECUTING
-Plan: 2 of 2
-Status: Phase complete — ready for verification
+Phase: 05 (enhancements-and-deployment) — EXECUTING
+Plan: 3 of 4
+Status: Plan 03 complete — plan 04 remaining
 Last activity: 2026-03-29
 
-Progress: [████░░░░░░] 40%
+Progress: [████████░░] 79%
 
 ## Performance Metrics
 
@@ -61,6 +61,7 @@ Progress: [████░░░░░░] 40%
 | Phase 04 P02 | 5min | 2 tasks | 12 files |
 | Phase 05 P01 | 5min | 2 tasks | 12 files |
 | Phase 05 P02 | 5min | 3 tasks | 10 files |
+| Phase 05 P03 | 4min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -100,6 +101,9 @@ Recent decisions affecting current work:
 - [Phase 05]: base-ui Dialog: disablePointerDismissal + showCloseButton={false} for non-dismissible
 - [Phase 05]: Realtime subscription scoped per userId via client wrapper component
 - [Phase 05]: Auth detection via GET /api/chats on mount for anonymous vs authenticated branching
+- [Phase 05]: Dynamic vision model selection (llama-3.2-11b-vision-instruct) when messages contain image file parts
+- [Phase 05]: Document context injected into system prompt (not as separate messages), truncated at 4000 chars
+- [Phase 05]: Upload-then-send pattern: get signed URL -> upload to Storage -> complete -> build parts -> sendMessage
 
 ### Pending Todos
 
@@ -112,6 +116,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T20:40:00.000Z
-Stopped at: Completed Wave 1 (05-01 + 05-02)
+Last session: 2026-03-29T20:47:00.000Z
+Stopped at: Completed 05-03-PLAN.md
 Resume file: None
