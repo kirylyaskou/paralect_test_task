@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { useChat } from '@ai-sdk/react'
 import { DefaultChatTransport } from 'ai'
 import { WelcomeScreen } from '@/components/chat/welcome-screen'
-import { ChatInput } from '@/components/chat/chat-input'
+import { ChatInput, type Attachment } from '@/components/chat/chat-input'
 import { useAnonymousUsage } from '@/hooks/use-anonymous-usage'
 import { AnonymousLimitDialog } from '@/components/auth/anonymous-limit-dialog'
 import { toast } from 'sonner'
@@ -56,7 +56,7 @@ export default function HomePage() {
   const isAnonymousStreaming =
     anonymousStatus === 'streaming' || anonymousStatus === 'submitted'
 
-  const handleSend = async (text: string) => {
+  const handleSend = async (text: string, _attachments?: Attachment[]) => {
     if (isAuthenticated) {
       // Existing behavior: create chat and navigate
       if (isCreating) return

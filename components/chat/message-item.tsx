@@ -5,6 +5,7 @@ import { User, Bot } from 'lucide-react'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { MessageMarkdown } from './message-markdown'
 import { MessageError } from './message-error'
+import { MessageImages } from './message-images'
 import { StreamingIndicator } from './streaming-indicator'
 
 interface MessageItemProps {
@@ -20,6 +21,15 @@ export function MessageItem({ message, isStreaming, isError, onRetry }: MessageI
     .filter((p): p is Extract<typeof p, { type: 'text' }> => p.type === 'text')
     .map((p) => p.text)
     .join('')
+
+  // Extract image URLs from file parts
+  const imageUrls = message.parts
+    .filter(
+      (p): p is Extract<typeof p, { type: 'file' }> =>
+        p.type === 'file' &&
+        (p as { mediaType?: string }).mediaType?.startsWith('image/') === true
+    )
+    .map((p) => (p as { url: string }).url)
 
   return (
     <div
@@ -44,6 +54,7 @@ export function MessageItem({ message, isStreaming, isError, onRetry }: MessageI
         {isUser ? (
           <div className="bg-muted rounded-2xl px-4 py-3 text-sm">
             {textContent}
+            {imageUrls.length > 0 && <MessageImages imageUrls={imageUrls} />}
           </div>
         ) : (
           <>
