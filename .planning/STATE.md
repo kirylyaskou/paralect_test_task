@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: verifying
-stopped_at: Phase 5 context gathered
-last_updated: "2026-03-29T19:29:50.358Z"
+stopped_at: Completed 05-01-PLAN.md
+last_updated: "2026-03-29T20:39:46.735Z"
 last_activity: 2026-03-29
 progress:
   total_phases: 5
   completed_phases: 4
-  total_plans: 9
-  completed_plans: 9
+  total_plans: 13
+  completed_plans: 10
   percent: 40
 ---
 
@@ -59,6 +59,7 @@ Progress: [████░░░░░░] 40%
 | Phase 03 P02 | 5min | 3 tasks | 9 files |
 | Phase 04 P01 | 4min | 2 tasks | 12 files |
 | Phase 04 P02 | 5min | 2 tasks | 12 files |
+| Phase 05 P01 | 5min | 2 tasks | 12 files |
 
 ## Accumulated Context
 
@@ -91,6 +92,9 @@ Recent decisions affecting current work:
 - [Phase 04]: useChat uses 'messages' prop (not 'initialMessages') for initial data in AI SDK v6
 - [Phase 04]: Direct DB access in server component for chat page (more reliable than fetch-to-own-API)
 - [Phase 04]: URL query param for passing prompt from home page to chat page
+- [Phase 05]: pdf-parse v2 PDFParse class API for PDF text extraction (ESM-native, proper cleanup)
+- [Phase 05]: Signed URL upload pattern: server creates URL with service_role, client uploads to Storage directly
+- [Phase 05]: Text extraction truncated to 4000 chars for manageable LLM context
 
 ### Pending Todos
 
@@ -103,6 +107,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T19:29:50.355Z
-Stopped at: Phase 5 context gathered
-Resume file: .planning/phases/05-enhancements-and-deployment/05-CONTEXT.md
+Last session: 2026-03-29T20:39:46.732Z
+Stopped at: Completed 05-01-PLAN.md
+Resume file: None

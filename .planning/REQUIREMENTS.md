@@ -31,16 +31,16 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Image Attachments
 
-- [ ] **IMG-01**: User can paste image from clipboard into chat input
-- [ ] **IMG-02**: User can upload image file via button
-- [ ] **IMG-03**: Image preview shown before sending
+- [x] **IMG-01**: User can paste image from clipboard into chat input
+- [x] **IMG-02**: User can upload image file via button
+- [x] **IMG-03**: Image preview shown before sending
 - [ ] **IMG-04**: Images sent to OpenAI vision API for analysis
 
 ### Document Attachments
 
-- [ ] **DOC-01**: User can upload PDF/DOCX documents to a chat
+- [x] **DOC-01**: User can upload PDF/DOCX documents to a chat
 - [ ] **DOC-02**: Extracted text is injected as context in LLM system prompt
-- [ ] **DOC-03**: Attached documents are listed/indicated in the chat
+- [x] **DOC-03**: Attached documents are listed/indicated in the chat
 
 ### Anonymous Access
 
@@ -141,13 +141,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | MSG-04 | Phase 4 | Complete |
 | UX-02 | Phase 4 | Complete |
 | UX-03 | Phase 4 | Complete |
-| IMG-01 | Phase 5 | Pending |
-| IMG-02 | Phase 5 | Pending |
-| IMG-03 | Phase 5 | Pending |
+| IMG-01 | Phase 5 | Complete |
+| IMG-02 | Phase 5 | Complete |
+| IMG-03 | Phase 5 | Complete |
 | IMG-04 | Phase 5 | Pending |
-| DOC-01 | Phase 5 | Pending |
+| DOC-01 | Phase 5 | Complete |
 | DOC-02 | Phase 5 | Pending |
-| DOC-03 | Phase 5 | Pending |
+| DOC-03 | Phase 5 | Complete |
 | ANON-01 | Phase 5 | Pending |
 | ANON-02 | Phase 5 | Pending |
 | ANON-03 | Phase 5 | Pending |
