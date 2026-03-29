@@ -8,7 +8,7 @@ import { useQueryClient } from '@tanstack/react-query'
 import { useSearchParams } from 'next/navigation'
 import { toast } from 'sonner'
 import { MessageItem } from './message-item'
-import { ChatInput } from './chat-input'
+import { ChatInput, type Attachment } from './chat-input'
 import { WelcomeScreen } from './welcome-screen'
 import { ScrollToBottom } from './scroll-to-bottom'
 import { StreamingIndicator } from './streaming-indicator'
@@ -68,8 +68,8 @@ export function ChatView({ chatId, initialMessages }: ChatViewProps) {
   // Auto-scroll on messages change
   const { containerRef, showScrollButton, scrollToBottom } = useAutoScroll([messages])
 
-  // Handle sending
-  const handleSend = (text: string) => {
+  // Handle sending (attachments will be wired in plan 05-03)
+  const handleSend = (text: string, _attachments?: Attachment[]) => {
     sendMessage({ text })
     setTimeout(() => scrollToBottom(), 50)
   }
