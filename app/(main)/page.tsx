@@ -1,32 +1,48 @@
 'use client'
 
-import { MessageSquare, Plus, Loader2 } from 'lucide-react'
-import { useCreateChat } from '@/hooks/use-chats'
-import { Button } from '@/components/ui/button'
+import { useRouter } from 'next/navigation'
+import { useState } from 'react'
+import { WelcomeScreen } from '@/components/chat/welcome-screen'
+import { ChatInput } from '@/components/chat/chat-input'
+import { toast } from 'sonner'
 
 export default function HomePage() {
-  const createChat = useCreateChat()
+  const router = useRouter()
+  const [isCreating, setIsCreating] = useState(false)
+
+  const handleSend = async (text: string) => {
+    if (isCreating) return
+    setIsCreating(true)
+    try {
+      // Create a new chat
+      const res = await fetch('/api/chats', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({}),
+      })
+      if (!res.ok) throw new Error('Failed to create chat')
+      const data = await res.json()
+      const chatId = data.chat.id
+
+      // Navigate to chat page with prompt as query param
+      router.push(`/chat/${chatId}?prompt=${encodeURIComponent(text)}`)
+    } catch {
+      toast.error('Failed to create chat. Please try again.')
+      setIsCreating(false)
+    }
+  }
 
   return (
-    <div className="flex flex-1 flex-col items-center justify-center p-6">
-      <MessageSquare className="h-12 w-12 text-muted-foreground" />
-      <h1 className="mt-4 text-xl font-semibold">Start a conversation</h1>
-      <p className="mt-2 text-sm text-muted-foreground text-center max-w-xs">
-        Create a new chat to begin talking with the AI assistant.
-      </p>
-      <Button
-        variant="default"
-        className="mt-6"
-        onClick={() => createChat.mutate()}
-        disabled={createChat.isPending}
-      >
-        {createChat.isPending ? (
-          <Loader2 className="h-4 w-4 animate-spin" />
-        ) : (
-          <Plus className="h-4 w-4" />
-        )}
-        {createChat.isPending ? 'Creating...' : 'New chat'}
-      </Button>
+    <div className="flex flex-1 flex-col min-h-0">
+      <div className="flex-1 overflow-y-auto">
+        <WelcomeScreen onPromptClick={handleSend} />
+      </div>
+      <ChatInput
+        onSend={handleSend}
+        onStop={() => {}}
+        isStreaming={false}
+        disabled={isCreating}
+      />
     </div>
   )
 }
