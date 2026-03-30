@@ -35,21 +35,22 @@ export function ChatItem({ chat, isActive }: ChatItemProps) {
           <span className="text-muted-foreground italic truncate">New chat</span>
         )}
       </SidebarMenuButton>
-      <SidebarMenuAction showOnHover>
-        <DropdownMenu>
-          <DropdownMenuTrigger aria-label="Chat options">
-            <MoreHorizontal className="h-4 w-4" />
-          </DropdownMenuTrigger>
-          <DropdownMenuContent side="right" align="start">
-            <DropdownMenuItem
-              variant="destructive"
-              onSelect={() => setDeleteDialogOpen(true)}
-            >
-              Delete chat
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </SidebarMenuAction>
+      <DropdownMenu>
+        <DropdownMenuTrigger
+          render={<SidebarMenuAction showOnHover />}
+          aria-label="Chat options"
+        >
+          <MoreHorizontal className="h-4 w-4" />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent side="right" align="start">
+          <DropdownMenuItem
+            variant="destructive"
+            onSelect={() => setDeleteDialogOpen(true)}
+          >
+            Delete chat
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
       <DeleteChatDialog
         chatId={chat.id}
         chatTitle={chat.title}
