@@ -69,7 +69,8 @@ export default function HomePage() {
         })
         if (!res.ok) throw new Error('Failed to create chat')
         const data = await res.json()
-        router.push(`/chat/${data.chat.id}?prompt=${encodeURIComponent(text)}`)
+        sessionStorage.setItem('pending-prompt', text)
+        router.push(`/chat/${data.chat.id}`)
       } catch {
         toast.error('Failed to create chat. Please try again.')
         setIsCreating(false)

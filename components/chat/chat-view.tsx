@@ -5,7 +5,6 @@ import { useChat } from '@ai-sdk/react'
 import { DefaultChatTransport } from 'ai'
 import type { UIMessage } from 'ai'
 import { useQueryClient } from '@tanstack/react-query'
-import { useSearchParams } from 'next/navigation'
 import { toast } from 'sonner'
 import { supabasePublic } from '@/lib/supabase/public-client'
 import { MessageItem } from './message-item'
@@ -100,7 +99,6 @@ export function ChatView({
 }: ChatViewProps) {
   const queryClient = useQueryClient()
   const titleGeneratedRef = useRef(false)
-  const searchParams = useSearchParams()
   const promptSent = useRef(false)
   const [isUploading, setIsUploading] = useState(false)
 
@@ -132,14 +130,15 @@ export function ChatView({
     }
   }, [initialMessages.length])
 
-  // Auto-send prompt from URL search param (home page -> new chat flow)
+  // Auto-send prompt from sessionStorage (home page -> new chat flow)
   useEffect(() => {
-    const prompt = searchParams.get('prompt')
+    const prompt = sessionStorage.getItem('pending-prompt')
     if (prompt && !promptSent.current && messages.length === 0) {
       promptSent.current = true
+      sessionStorage.removeItem('pending-prompt')
       sendMessage({ text: prompt })
     }
-  }, [searchParams]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const isStreaming = status === 'streaming' || status === 'submitted'
   const hasMessages = messages.length > 0
