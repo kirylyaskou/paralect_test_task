@@ -34,7 +34,7 @@ export async function POST(
     }
 
     const { text: title } = await generateText({
-      model: openrouter.chat('meta-llama/llama-4-maverick:free'),
+      model: openrouter.chat('openrouter/free'),
       system:
         'Generate a concise 3-6 word title for this conversation. Return ONLY the title, no quotes or punctuation.',
       prompt: firstExchange

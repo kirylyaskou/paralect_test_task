@@ -55,7 +55,9 @@ export function ChatInput({ onSend, onStop, isStreaming, disabled }: ChatInputPr
     const el = textareaRef.current
     if (!el) return
     el.style.height = 'auto'
-    el.style.height = `${Math.min(el.scrollHeight, MAX_HEIGHT)}px`
+    const height = Math.min(el.scrollHeight, MAX_HEIGHT)
+    el.style.height = `${height}px`
+    el.style.overflowY = el.scrollHeight > MAX_HEIGHT ? 'auto' : 'hidden'
   }, [inputValue])
 
   // Auto-focus on mount
