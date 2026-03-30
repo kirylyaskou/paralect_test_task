@@ -26,7 +26,7 @@ export async function POST(req: Request) {
     const modelMessages = await convertToModelMessages(messages)
 
     const result = streamText({
-      model: openrouter.chat('meta-llama/llama-3.3-70b-instruct:free'),
+      model: openrouter.chat('openrouter/free'),
       system: 'You are a helpful assistant.',
       messages: modelMessages,
     })

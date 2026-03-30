@@ -76,7 +76,7 @@ export async function POST(req: Request) {
 
     const modelId = hasImages
       ? 'google/gemma-3-27b-it:free'
-      : 'meta-llama/llama-3.3-70b-instruct:free'
+      : 'openrouter/free'
 
     const modelMessages = await convertToModelMessages(messages)
 
