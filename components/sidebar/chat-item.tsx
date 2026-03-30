@@ -2,19 +2,12 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { MessageSquare, MoreHorizontal } from 'lucide-react'
+import { MessageSquare, Trash2 } from 'lucide-react'
 import type { Chat } from '@/lib/types'
 import {
   SidebarMenuButton,
-  SidebarMenuAction,
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
 import { DeleteChatDialog } from '@/components/chat/delete-chat-dialog'
 
 interface ChatItemProps {
@@ -35,22 +28,17 @@ export function ChatItem({ chat, isActive }: ChatItemProps) {
           <span className="text-muted-foreground italic truncate">New chat</span>
         )}
       </SidebarMenuButton>
-      <DropdownMenu>
-        <DropdownMenuTrigger
-          render={<SidebarMenuAction showOnHover />}
-          aria-label="Chat options"
-        >
-          <MoreHorizontal className="h-4 w-4" />
-        </DropdownMenuTrigger>
-        <DropdownMenuContent side="right" align="start">
-          <DropdownMenuItem
-            variant="destructive"
-            onSelect={() => setDeleteDialogOpen(true)}
-          >
-            Delete chat
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+      <button
+        onClick={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+          setDeleteDialogOpen(true)
+        }}
+        aria-label="Delete chat"
+        className="absolute top-1.5 right-1 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-sidebar-foreground ring-sidebar-ring outline-hidden hover:bg-sidebar-accent hover:text-sidebar-accent-foreground opacity-0 group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 transition-opacity"
+      >
+        <Trash2 className="h-3.5 w-3.5" />
+      </button>
       <DeleteChatDialog
         chatId={chat.id}
         chatTitle={chat.title}

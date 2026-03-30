@@ -7,7 +7,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
 
-    // Validate input (ARCH-05)
+    // Validate input
     const result = signInSchema.safeParse(body)
     if (!result.success) {
       return Response.json(
@@ -16,14 +16,50 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Authenticate via Supabase Auth (fresh client per request)
     const supabase = createAuthClient()
+
+    // Try normal sign-in first
     const { data, error } = await supabase.auth.signInWithPassword({
       email: result.data.email,
       password: result.data.password,
     })
 
     if (error) {
+      // If email not confirmed, auto-confirm and retry
+      if (error.message.includes('Email not confirmed')) {
+        // Find user by email and confirm them
+        const { data: userList } = await supabase.auth.admin.listUsers()
+        const user = userList?.users.find(
+          (u) => u.email === result.data.email
+        )
+
+        if (user) {
+          await supabase.auth.admin.updateUserById(user.id, {
+            email_confirm: true,
+          })
+
+          // Retry sign-in after confirmation
+          const { data: retryData, error: retryError } =
+            await supabase.auth.signInWithPassword({
+              email: result.data.email,
+              password: result.data.password,
+            })
+
+          if (retryError || !retryData.user) {
+            return Response.json(
+              { error: 'Invalid email or password. Please try again.' },
+              { status: 401 }
+            )
+          }
+
+          await createSession(retryData.user.id)
+          return Response.json(
+            { user: { id: retryData.user.id, email: retryData.user.email } },
+            { status: 200 }
+          )
+        }
+      }
+
       return Response.json(
         { error: 'Invalid email or password. Please try again.' },
         { status: 401 }
@@ -33,7 +69,6 @@ export async function POST(request: NextRequest) {
     // Create session cookie
     await createSession(data.user.id)
 
-    // Return success -- client handles redirect
     return Response.json(
       { user: { id: data.user.id, email: data.user.email } },
       { status: 200 }

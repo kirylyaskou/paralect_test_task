@@ -16,20 +16,19 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Create user via Supabase Auth (fresh client per request)
+    // Create user via Supabase Auth admin API (auto-confirms email)
     const supabase = createAuthClient()
-    const { data, error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.admin.createUser({
       email: result.data.email,
       password: result.data.password,
-      options: {
-        data: {
-          display_name: result.data.displayName,
-        },
+      email_confirm: true,
+      user_metadata: {
+        display_name: result.data.displayName,
       },
     })
 
     if (error) {
-      if (error.message.includes('already registered')) {
+      if (error.message.includes('already been registered') || error.message.includes('already exists')) {
         return Response.json(
           { error: 'An account with this email already exists.' },
           { status: 409 }
