@@ -75,8 +75,8 @@ export async function POST(req: Request) {
     )
 
     const modelId = hasImages
-      ? 'meta-llama/llama-3.2-11b-vision-instruct:free'
-      : 'meta-llama/llama-4-maverick:free'
+      ? 'google/gemma-3-27b-it:free'
+      : 'meta-llama/llama-3.3-70b-instruct:free'
 
     const modelMessages = await convertToModelMessages(messages)
 
